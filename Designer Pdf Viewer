@@ -1,0 +1,20 @@
+int designerPdfViewer(vector<int> h, string word) {
+    string alp= "abcdefghijklmnopqrstuvwxyz";
+    map<int ,char > m;
+    for (int i=0; i<h.size(); i++) {
+        m[alp[i]]=h[i];
+        // if (alp[i]==word[j]) {
+        //     v.push_back(m.first());
+        // }
+    }
+    int sum=0;
+    vector<int > v(m.size(),0);
+    for (int i=0; i<h.size();i++) {
+        v[i]=m[word[i]];
+    }
+    int max=*max_element(v.begin(),v.end());
+    cout<<endl<<max;
+    
+    return word.size()*max;
+
+}
