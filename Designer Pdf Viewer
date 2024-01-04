@@ -1,4 +1,19 @@
 int designerPdfViewer(vector<int> h, string word) {
+    
+    int max=0;
+    for(int i=0;i<word.length();i++){
+        int l=word[i]-97;
+        if (h[l]>max) {
+            max=h[l];
+        }
+    }
+   return max*word.length();
+
+}
+
+//OTHER METHOD
+
+int designerPdfViewer(vector<int> h, string word) {
     string alp= "abcdefghijklmnopqrstuvwxyz";
     map<int ,char > m;
     for (int i=0; i<h.size(); i++) {
