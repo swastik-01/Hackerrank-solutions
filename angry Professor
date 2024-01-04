@@ -1,0 +1,18 @@
+string angryProfessor(int k, vector<int> a) {
+    string res;
+    int count1=0;
+    for(int i=0;i<a.size();i++){
+        if(a[i]<=0){
+            count1++;
+        }
+        
+    }
+    
+    if (k<=count1) {
+        res="NO";
+    }
+    else {
+        res="YES";
+    }
+    return  res;
+}
