@@ -1,0 +1,22 @@
+#include <iostream>
+#include <cstdio>
+using namespace std;
+
+int main() {
+    // Complete the code.
+    int n;
+    long ld;
+    char c;
+    float f;
+    double dd;
+    cin >>n>>ld >>c>>f>>dd;
+    
+    cout<<n<<endl;
+    cout<<ld<<endl;
+    cout<<c<<endl;
+    printf("%0.3f", f);
+    cout<<endl;
+    printf("%0.9f", dd);
+    cout<<endl;
+    return 0;
+}
