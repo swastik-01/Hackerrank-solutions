@@ -1,0 +1,12 @@
+int viralAdvertising(int n) {
+    int sum=0;
+    int temp=5,likes;
+    for(int i=0; i<n;i++){
+        likes= floor(temp/2);
+        sum+=likes;
+        temp=likes*3;
+        
+    }
+    return sum;
+
+}
