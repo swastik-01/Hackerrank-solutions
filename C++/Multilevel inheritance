@@ -1,0 +1,39 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+class A{
+    public:
+    void a(){
+        cout<<"I am a triangle"<<endl;
+    }
+};
+class B: public A{
+    public:
+    void b(){
+        cout<<"I am an isosceles triangle"<<endl;
+    }
+    
+};   
+class C:public B{
+    public:
+    void c(){
+        cout<<"I am an equilateral triangle"<<endl;
+    }
+
+    
+}; 
+
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    C eq;
+    eq.c(); 
+    eq.b(); 
+    eq.a();
+     
+    return 0;
+}
