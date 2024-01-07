@@ -1,3 +1,4 @@
+//INHERITANCE METHOD
 #include <cmath>
 #include <cstdio>
 #include <vector>
@@ -5,7 +6,67 @@
 #include <algorithm>
 using namespace std;
 
+class Triangle{
+    public:
+    void a(){
+        cout<<"I am a triangle"<<endl;
+    }
+};
+class Isosceles:public Triangle{
+    public:
+    void b(){
+        cout<<"I am an isosceles triangle"<<endl;
+    }
+    void desc(){
+        cout<<"In an isosceles triangle two sides are equal"<<endl;
+    }
+};
 
+int main() {
+    Isosceles tr;
+    tr.b();
+        tr.desc();
+    tr.a();
+    return 0;
+}
+
+
+//MULTILEVEL INHERITANCE
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+class A{
+    public:
+    void a(){
+        cout<<"I am a triangle"<<endl;
+    }
+};
+class B:public A{
+    public:
+    void b(){
+        cout<<"In an isosceles triangle two sides are equal"<<endl;
+    }
+};
+class C:public B{
+    public:
+    void c(){
+        cout<<"I am an isosceles triangle"<<endl;
+    }
+};
+int main() {
+    C tr;
+    tr.c();
+    tr.b();
+    tr.a();
+    return 0;
+}
+
+
+//NORMAL METHOD
 int main() {
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
     
