@@ -1,0 +1,54 @@
+//Easy and understandable but TLE
+#include <bits/stdc++.h>
+using namespace std;
+
+
+int main() {
+    int n;cin>>n;
+    vector<int > v;
+    int s,k;
+    while(n--){
+        cin>>s;
+        if (s==1 ) {
+            cin>>k;
+            v.push_back(k);
+        }
+        else if(s==2){
+            if (!v.empty()) {
+                cin>>k;
+                v.erase(remove(v.begin(), v.end(), k), v.end());
+            }
+        }
+        else if(s==3){
+            if (!v.empty()) {
+            cout<<*min_element(v.begin(),v.end())<<endl;
+            }
+        }
+    }
+    
+    return 0;
+}
+
+
+//Other approach
+int n;cin>>n;
+    set <long > v;
+    long int s,k;
+    while(n--){
+        cin>>s;
+        if (s==1 ) {
+            cin>>k;
+            v.insert(k);
+        }
+        else if(s==2){
+            if (!v.empty()) {
+                cin>>k;
+                v.erase(k);
+            }
+        }
+        else if(s==3){
+            if (!v.empty()) {
+            cout<<*v.begin()<<endl;
+            }
+        }
+    }
