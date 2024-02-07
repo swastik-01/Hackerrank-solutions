@@ -6,3 +6,7 @@ g.grade, s.marks from
 students as s join grades as g 
 on s.marks between g.min_mark and g.max_mark
 order by g.grade desc,s.name asc;
+
+
+--other way 
+select case when grade > 7 then name else null end as names, grade, marks from students inner join grades on min_mark <= marks and marks <= max_mark order by grade desc, name asc
