@@ -1,0 +1,23 @@
+//StringStream
+
+
+
+
+//another method
+#include <bits/stdc++.h>
+using namespace std;
+
+
+int main() {
+    string n;
+    getline(cin,n);
+    for(int c=0;c<n.length();c++){
+        
+        if(n[c]==','){
+            cout<<endl;
+            continue;
+        }
+        cout<<n[c];
+    }
+    return 0;
+}
