@@ -1,0 +1,24 @@
+//Easy but TLE
+int cookies(int k, vector<int> A) {
+    int count=0, temp;
+    sort(A.begin(),A.end());
+    while (A[0]<k && A.size()>=2) {
+        temp=A[0]*1+A[1]*2;
+        A.erase(A.begin(),A.begin()+2);
+        // A.erase(A.begin());
+        A.push_back(temp);
+        sort(A.begin(),A.end());
+        count++;
+    }
+    
+    if(A.size()==1 && A[0]<k){
+        count= -1;
+    }
+    
+    return count;
+}
+
+
+
+//With priority queue
+
