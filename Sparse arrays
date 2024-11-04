@@ -11,3 +11,17 @@ vector<int> matchingStrings(vector<string> stringList, vector<string> queries) {
     }
     return v;
 }
+
+with hashmap
+
+vector<int> matchingStrings(vector<string> stringList, vector<string> queries) {
+    vector<int> v;
+    map<string,int> m;
+    for(const auto&e:stringList){
+        m[e]++;
+    }
+    for(const auto& ele:queries){
+        v.push_back(m[ele]);
+    }
+    return v;
+}
